@@ -1,0 +1,334 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+body{
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    line-height: 14px;
+}
+
+/* CSS starts */
+.container{
+    width: 100%dvh;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1.75fr;
+    grid-template-rows: 0.4fr 0.6fr 5fr 0.5fr;
+    grid-template-areas:    "nothing   new-posts blank"
+                            "logo      stories   suggested"
+                            "menu      posts     suggested"
+                            "more      posts     suggested";
+}
+
+.nothing{
+    grid-area: nothing;
+    border-right: 1px solid #DBDBDB;
+}
+
+.blank{
+    grid-area: blank;    
+}
+
+.new-posts{
+    grid-area: new-posts;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 220px;
+}
+
+.new-posts p{
+    background: #fff;
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0 10px 45px rgba(0, 0, 0, .2);
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    font-weight: 500;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    padding-top: 7px;
+    
+}
+
+.logo{
+    grid-area: logo;
+    border-right: 1px solid #DBDBDB;
+    position: static;
+    
+}
+
+.logo img{
+    margin-left: 20px;
+}
+
+.menu{
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    border-right: 1px solid #DBDBDB;
+    position: sticky;
+    
+}
+
+.menu .main-sidebar-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 50px;
+}
+
+.menu .main-sidebar-icons:hover{
+    
+    background: #f1eded;
+    border: none;
+    border-radius: 10px;
+}
+
+.menu img{
+    margin-left: 10px;
+}
+
+.menu p{
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#home{
+    font-weight: 800;
+}
+
+
+
+.more{
+    grid-area: more;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-right: 1px solid #DBDBDB;
+    
+}
+
+.more .more-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.more img{
+    margin-left: 20px;
+}
+
+.more p{
+    padding-left: 15px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.stories{
+    grid-area: stories;
+    margin-left: 120px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    width: 600px;
+
+    
+    
+}
+
+.stories .story p{
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #262626;
+    font-size: 12px;
+}
+
+.posts{
+    grid-area: posts;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 30px;
+    
+    
+}
+
+.posts .post-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 150px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.channel-logo{
+    padding-left: 2px;
+}
+
+.posts .post-title p{
+    padding-left: 10px;
+    font-weight: 500;
+    
+}
+
+#hour{
+    color: #737373;
+    font-weight: 400;
+}
+
+.dots{
+    padding-left: 250px;
+}
+
+.posts .post-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 150px;
+    border: 1px solid #EFEFEF;
+    border-radius: 4px;
+}
+
+.posts .post-footer{
+    margin: 0 150px;
+}
+
+.posts .post-footer .footer-icons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0px;
+}
+
+.icon-space{
+    padding-left: 12px;
+}
+
+.save-post{
+    padding-left: 330px;
+}
+
+.posts .post-footer .footer-like{
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.posts .post-footer .footer-description{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5px 0;
+    line-height: 20px;
+    
+}
+
+.des-more{
+    color: #737373;
+}
+
+.posts .post-footer .footer-all-comments{
+    padding: 5px 0;
+    color: #737373;
+}
+
+.posts .post-footer .footer-add-comment{
+    display: flex;
+    padding: 10px 0;
+    color: #737373;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.suggested{
+    grid-area: suggested;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.suggested .right-sidebar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.suggested .right-sidebar img{
+    margin-left: 5px;
+}
+
+.suggested .right-sidebar .username{
+    padding-left: 10px;
+}
+
+.right-sidebar .your-profile{
+    font-weight: 500;
+}
+.right-sidebar .your-sub-profile{
+    font-size: 12px;
+    color: #737373;
+    padding-top: 5px;
+}
+
+.right-sidebar .follow{
+    padding-left: 50px;
+    font-size: 12px;
+    color: #0095F6;
+    font-weight: 500;
+}
+
+.suggested .suggested-for-you{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.suggested .suggested-for-you #see-all{
+    padding-left: 130px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.suggested .suggested-for-you #suggested-line{
+    color: #737373;
+    font-weight: 500;
+}
+
+.footer-tags .tags{
+    color: #c7c7c7;
+    padding: 20px 0px;
+    font-size: 12px;
+    padding-right: 100px;
+    line-height: 18px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.footer-tags .copyright{
+    color: #c7c7c7;
+    font-size: 12px;
+    padding-left: 5px;
+}
